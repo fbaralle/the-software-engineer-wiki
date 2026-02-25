@@ -1,27 +1,17 @@
-# The Software Engineer's Practical Algorithms & Systems Guide
+# Software Engineering Wiki
 
-A must-know reference for engineers without a formal CS background
+A practical reference for algorithms, data structures, and system design — aimed at engineers who want a clear, example-driven guide without a formal CS background.
 
-## Modules
+## Contents
 
-### 1. Algorithms and Data Structures
-- [Big O Notation](./modules/01-algorithms-and-data-structures/01-big-o/README.md) - Understanding algorithm complexity and scalability
-- [Arrays and Objects Performance](./modules/01-algorithms-and-data-structures/02-arrays-and-objects/README.md) - Time and space complexity of fundamental data structures
-- [Searching and Sorting](./modules/01-algorithms-and-data-structures/02-searching-and-sorting/README.md) - Common algorithms for finding and organizing data
-- [Linked Lists, Stacks, and Queues](./modules/01-algorithms-and-data-structures/03-linked-lists-stacks-queues/README.md) - Fundamental linear data structures
-- [Trees and Graphs](./modules/01-algorithms-and-data-structures/04-trees-and-graphs/README.md) - Hierarchical and network data structures
-- [Recursion and Iterative Thinking](./modules/01-algorithms-and-data-structures/05-recursion-and-iteration/README.md) - Approaches to solving problems
-- [Dynamic Programming (Basics)](./modules/01-algorithms-and-data-structures/06-dynamic-programming/README.md) - Optimizing recursive solutions
-- [Problem Solving Patterns](./modules/01-algorithms-and-data-structures/07-problem-solving-patterns/README.md) - Common algorithmic patterns and problem-solving strategies
+- **[Documentation (Markdown)](./docs/)** — Browse the guide as markdown files in this repo. Start from [docs/README.md](./docs/README.md) for the full index.
+- **[Website](https://your-website-url.vercel.app)** — Read the same content as a docs site (placeholder: deploy the `website/` app to Vercel and add your URL here).
 
-### 2. System Design
-- Coming soon...
+## Repo structure
 
-## How to use this guide
+| Path | Description |
+|------|-------------|
+| `docs/` | Source content: modules, README index, and all markdown. Single source of truth for both GitHub and the website. |
+| `website/` | Nextra app that serves `docs/` at `/docs`. Run locally with `cd website && npm run dev`. Deploy with root directory = `website`. |
 
-Each module contains:
-- **README.md**: Overview and navigation
-- **Topic files**: Detailed explanations with examples
-- **Code examples**: TypeScript implementations
-
-Start with [Big O Notation](./modules/01-algorithms-and-data-structures/01-big-o/README.md) to build your foundation.
+The website uses a symlink `website/content` → `../docs` so the Nextra app reads the same files as the repo. See [PLAN_NEXTRA_VERCEL.md](./PLAN_NEXTRA_VERCEL.md) for setup details.
