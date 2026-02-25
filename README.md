@@ -14,4 +14,4 @@ A practical reference for algorithms, data structures, and system design — aim
 | `docs/` | Source content: modules, README index, and all markdown. Single source of truth for both GitHub and the website. |
 | `website/` | Nextra app that serves `docs/` at `/docs`. Run locally with `cd website && npm run dev`. Deploy with root directory = `website`. |
 
-The website uses a symlink `website/content` → `../docs` so the Nextra app reads the same files as the repo. See [PLAN_NEXTRA_VERCEL.md](./PLAN_NEXTRA_VERCEL.md) for setup details.
+The website uses a symlink `website/content` → `../docs` so the Nextra app reads the same files as the repo.
