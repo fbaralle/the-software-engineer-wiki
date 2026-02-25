@@ -1,0 +1,23 @@
+@import 'tailwindcss';
+
+/* Nextra theme (uses Tailwind v4 layers) */
+@import 'nextra-theme-docs/style.css';
+
+/* Dark mode variant for Nextra */
+@variant dark (&:where(.dark *));
+
+/* Light mode (default); theme toggle controls .dark */
+:root {
+  --foreground: #0f172a;
+  --background: #ffffff;
+}
+
+:root.dark {
+  --foreground: #f1f5f9;
+  --background: #0f172a;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+}
