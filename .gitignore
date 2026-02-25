@@ -7,6 +7,10 @@ node_modules/
 .next/
 out/
 
+# Pagefind search index (generated at build)
+_pagefind/
+public/_pagefind/
+
 # Build / env
 .env*.local
 *.tsbuildinfo
