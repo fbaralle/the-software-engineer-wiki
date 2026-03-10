@@ -4,14 +4,18 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "prebuild": "node scripts/ensure-content.js",
     "build": "next build",
     "postbuild": "pagefind --site .next/server/app --output-path public/_pagefind",
     "start": "next start",
     "lint": "next lint",
-    "setup:symlink": "ln -snf ../docs content"
+    "setup:symlink": "ln -snf ../docs content",
+    "cf:build": "opennextjs-cloudflare build",
+    "preview": "npm run build && npm run cf:build && wrangler dev"
   },
   "dependencies": {
-    "next": "^14.2.0",
+    "@opennextjs/cloudflare": "^1.0.0",
+    "next": "^15.0.0",
     "nextra": "^4.6.1",
     "nextra-theme-docs": "^4.6.1",
     "react": "^18.2.0",
@@ -23,7 +27,8 @@
     "@types/react": "^18.2.0",
     "@types/react-dom": "^18.2.0",
     "eslint": "^8.0.0",
-    "eslint-config-next": "^14.2.0",
+    "eslint-config-next": "^15.0.0",
+    "wrangler": "^4.0.0",
     "pagefind": "^1.4.0",
     "postcss": "^8.4.0",
     "tailwindcss": "^4.0.0",

@@ -19,6 +19,10 @@ public/_pagefind/
 .idea/
 .DS_Store
 
+# content/ may be a real directory copy created by scripts/ensure-content.js
+# The symlink itself is tracked; the real directory should not be committed
+website/content/
+
 # Debug
 npm-debug.log*
 yarn-debug.log*
